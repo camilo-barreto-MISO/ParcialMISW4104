@@ -1,0 +1,53 @@
+<div class="container">
+  <h1>TuSegundazo.com</h1>
+  <div class="divider top-divider"></div>
+  <div class="row">
+    <div class="col-12">
+      <img src="assets/portada.jpg" class="img-fluid banner" alt="Banner">
+    </div>
+  </div>
+  <div class="divider bottom-divider"></div>
+  <div class="row">
+    <div class="col-4">
+      <table class="table table-bordered">
+        <thead >
+          <tr class="h4 encabezado-fondo  ">
+            <th class="h4 encabezado-fondo  ">#</th>
+            <th class="h4 encabezado-fondo  ">Marca</th>
+            <th class="h4 encabezado-fondo  ">Línea</th>
+            <th class="h4 encabezado-fondo  ">Modelo</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let vehiculo of vehiculos; let indice = index">
+            <td >{{indice + 1}}</td>
+            <td >{{vehiculo.marca}}</td>
+            <td >{{vehiculo.linea}}</td>
+            <td >{{vehiculo.modelo}}</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-12">
+      <!-- Reemplaza la segunda tabla por tres campos -->
+      <div class="form-group">
+        <label >Total Renault:    {{cantidadDeVehiculosPorMarca("Renault")}}</label>
+      </div>
+      <div class="form-group">
+        <label >Total Chevrolet: {{cantidadDeVehiculosPorMarca("Chevrolet")}}</label>
+      </div>
+      <div class="form-group">
+        <label >Total Nissan:    {{cantidadDeVehiculosPorMarca("Nissan")}} </label>
+      </div>
+    </div>
+  </div>
+  <div class="row justify-content-center">
+      <footer class="col-4 text-center">
+        <div class="container">
+          <p class="text-center">Contact us: +57 3102105253 - info@tusegundazo.com - @tusegundazo</p>
+        </div>
+      </footer>
+  </div>
+</div>
